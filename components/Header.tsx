@@ -1,14 +1,11 @@
 import React from "react";
 import * as Menubar from "@radix-ui/react-menubar";
-import {
-  CheckIcon,
-  ChevronRightIcon,
-  DotFilledIcon,
-} from "@radix-ui/react-icons";
-import * as Toggle from "@radix-ui/react-toggle";
 import { useTheme } from "next-themes";
 import Link from "next/link";
+
+
 const MenubarDemo = () => {
+
   const { theme, setTheme } = useTheme();
 
   return (
