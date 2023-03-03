@@ -1,4 +1,4 @@
-import Link from "next/link"
+import Link from "next/link";
 const Card = function Card() {
   return (
     <div className="mt-5 w-10/12 mx-auto  border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
@@ -9,10 +9,13 @@ const Card = function Card() {
         aria-labelledby="about-tab"
       >
         <h2 className="mb-3 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white">
-          How to test the Internet Speed In Ubuntu And Raspberry Pi 4 With CLI Tool?
+          How to test the Internet Speed In Ubuntu And Raspberry Pi 4 With CLI
+          Tool?
         </h2>
+
         <p className="mb-3 text-gray-500 dark:text-gray-400">
-          Lorem excepteur dolore ex veniam ad velit officia enim velit consequat consequat nulla eiusmod.
+          Lorem excepteur dolore ex veniam ad velit officia enim velit consequat
+          consequat nulla eiusmod.
         </p>
         <Link
           href="/read"
