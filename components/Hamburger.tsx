@@ -6,18 +6,14 @@ import {
   DotFilledIcon,
   HamburgerMenuIcon,
 } from "@radix-ui/react-icons";
-import Link from "next/link"
+import Link from "next/link";
 
-const DropdownMenuDemo = () => {
-  const [bookmarksChecked, setBookmarksChecked] = React.useState(true);
-  const [urlsChecked, setUrlsChecked] = React.useState(false);
-  const [person, setPerson] = React.useState("pedro");
-
+const Dropdown = () => {
   return (
-    <DropdownMenu.Root className="ml-2 mt-3">
+    <DropdownMenu.Root>
       <DropdownMenu.Trigger asChild>
         <button
-        className="sm:hidden md:hidden ml-3 rounded-full w-[35px] h-[35px] inline-flex items-center justify-center text-violet11 bg-white shadow-[0_2px_10px] shadow-blackA7 outline-none hover:bg-violet3 focus:shadow-[0_0_0_2px] focus:shadow-black"
+          className="ml-2 mt-4 sm:hidden md:hidden ml-3 rounded-full w-[35px] h-[35px] inline-flex items-center justify-center text-violet11 bg-white shadow-[0_2px_10px] shadow-blackA7 outline-none hover:bg-violet3 focus:shadow-[0_0_0_2px] focus:shadow-black"
           aria-label="Customise options"
         >
           <HamburgerMenuIcon />
@@ -30,13 +26,13 @@ const DropdownMenuDemo = () => {
           sideOffset={5}
         >
           <DropdownMenu.Item className="group text-[13px] leading-none text-violet11 rounded-[3px] flex items-center h-[25px] px-[5px] relative pl-[25px] select-none outline-none data-[disabled]:text-mauve8 data-[disabled]:pointer-events-none data-[highlighted]:bg-violet9 data-[highlighted]:text-violet1">
-           <Link href="/"> Home </Link>
+            <Link href="/">Home</Link>
           </DropdownMenu.Item>
           <DropdownMenu.Item className="group text-[13px] leading-none text-violet11 rounded-[3px] flex items-center h-[25px] px-[5px] relative pl-[25px] select-none outline-none data-[disabled]:text-mauve8 data-[disabled]:pointer-events-none data-[highlighted]:bg-violet9 data-[highlighted]:text-violet1">
-           <Link href="/about"> About us </Link>
+            <Link href="/about">About us</Link>
           </DropdownMenu.Item>
           <DropdownMenu.Item className="group text-[13px] leading-none text-violet11 rounded-[3px] flex items-center h-[25px] px-[5px] relative pl-[25px] select-none outline-none data-[disabled]:text-mauve8 data-[disabled]:pointer-events-none data-[highlighted]:bg-violet9 data-[highlighted]:text-violet1">
-            <Link href="/contact"> contact </Link> 
+            <Link href="/contact">contact</Link>
           </DropdownMenu.Item>
         </DropdownMenu.Content>
       </DropdownMenu.Portal>
@@ -44,4 +40,4 @@ const DropdownMenuDemo = () => {
   );
 };
 
-export default DropdownMenuDemo;
+export default Dropdown;
