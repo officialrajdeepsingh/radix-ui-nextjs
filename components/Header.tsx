@@ -2,17 +2,16 @@ import React from "react";
 import * as Menubar from "@radix-ui/react-menubar";
 import { useTheme } from "next-themes";
 import Link from "next/link";
-
+import Hamburger from "./Hamburger";
 
 const MenubarDemo = () => {
-
   const { theme, setTheme } = useTheme();
 
   return (
-    <>
-      <Menubar.Root
-        className={"flex w-[340px] mx-auto bg-white p-[3px] justify-around my-5 rounded-lg shadow-[0_2px_10px] shadow-blackA7"}
-      >
+    <div className="flex items-center">
+      <Hamburger />
+
+      <Menubar.Root className="hidden sm:flex  w-[340px] mx-auto bg-white p-[3px] justify-around my-5 rounded-lg shadow-[0_2px_10px] shadow-blackA7">
         <Menubar.Menu>
           <Menubar.Trigger className="py-2 px-3 outline-none select-none font-medium leading-none rounded text-violet11 text-[13px] flex items-center justify-between gap-[2px] data-[highlighted]:bg-violet4 data-[state=open]:bg-violet4">
             <Link href={"/"}>
@@ -33,14 +32,13 @@ const MenubarDemo = () => {
           <Menubar.Trigger className="
             py-2 px-3 outline-none select-none font-medium leading-none rounded text-violet11 text-[13px] flex items-center justify-between gap-[2px] data-[highlighted]:bg-violet4 data-[state=open]:bg-violet4
             ">
-            <Link href={'/contact'}>
+            <Link href={"/contact"}>
               Contact
             </Link>
           </Menubar.Trigger>
         </Menubar.Menu>
 
         <Menubar.Menu>
-
           <button
             className="ml-2 py-2 px-3 outline-none select-none font-medium leading-none rounded text-violet11 text-[13px] flex items-center justify-between gap-[2px] hover:bg-violet4"
             onClick={() => setTheme("dark")}
@@ -84,7 +82,7 @@ const MenubarDemo = () => {
           </button>
         </Menubar.Menu>
       </Menubar.Root>
-    </>
+    </div>
   );
 };
 
